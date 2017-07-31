@@ -1,0 +1,18 @@
+<p>Max: {{max}} - Search: {{getText()}}</p>
+<button (click)="reset()">Reset</button>
+<p>The full array</p>
+<ul>
+    <li *ngFor="let elem of array">{{elem}}</li>
+</ul>
+<p>The searched array</p>
+<ul>
+    <li *ngFor="let elem of searchArray">{{elem}}</li>
+</ul>
+<p>The grouped array</p>
+<ul>
+    <li *ngFor="let subArray of groupArray; index as i">{{i}}
+        <ul>
+            <li *ngFor="let elem of subArray">{{elem}}</li>
+        </ul>
+    </li>
+</ul>
